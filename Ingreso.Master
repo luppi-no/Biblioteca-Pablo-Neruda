@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ingreso.Master.cs" Inherits="Proyecto.Ingreso" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Content/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Content/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="Content/estilo.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadScript" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager ID="tksmIngreso" runat="server"></ajaxToolkit:ToolkitScriptManager>
+    <div class="container">
+        <div class="row">
+            <div class="row">
+            <div class="col-lg-12 header">
+                <div>
+                    &nbsp;<img alt="" class="auto-style1" src="Content/img/banner-biblioteca-amarillo.png" style="height: 150px; width: 700px"/></div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="col-lg-8 contentleft">
+                    <asp:ContentPlaceHolder ID="ContentLeft" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="col-lg-4 contentright">
+                    <asp:ContentPlaceHolder ID="ContentRight" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 footer">
+                    <div style="height: 50px; width: 700px">
+                    <b>Pablo Neruda</b> – Comprometidos con el mejoramiento continuo de nuestros
+                    equipos de trabajo.
+                    <br />
+                    Si tienes dudas no me importa 
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>

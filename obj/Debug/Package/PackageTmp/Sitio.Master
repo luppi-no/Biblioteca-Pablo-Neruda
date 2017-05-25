@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sitio.master.cs" Inherits="Proyecto.Sitio" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Content/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/estilo.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadScript" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager ID="tksmMaster" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true"></ajaxToolkit:ToolkitScriptManager>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 header">
+                <div>
+                    <img alt="" src="Content/img/grupo_emin_01.png" /><img alt="" src="Content/img/logo_grupo_emin.png" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 content">
+            <div class="salir">
+            <asp:LinkButton ID="lnkbAdministracion" runat="server" Text="" Visible="false" 
+                    CssClass="salirleft" onclick="lnkbAdministracion_Click"><span class="icon-home"></span>&nbsp;Administración</asp:LinkButton><asp:Label ID="lblSeparator" runat="server" Text="|" Visible="false"></asp:Label><asp:Label ID="lblNombreUsuario" runat="server" Text="" CssClass="salirleft salirright"></asp:Label>|<asp:LinkButton 
+                    ID="lnkbSalir" runat="server" Text="" CssClass="salirright" 
+                    onclick="lnkbSalir_Click"><span class="icon-off"></span>&nbsp;Salir</asp:LinkButton>
+            </div>
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 footer">
+                <div>
+                    <b>Gerencia Capital Humano</b> – Comprometidos con el mejoramiento continuo de nuestros
+                    equipos de trabajo.
+                    <br />
+                    Si tienes dudas contacta a: Constanza Schalper, mail: <a href="mailto:cschalper@emin.cl"
+                        target="_top">cschalper@emin.cl</a>, Tel: 02-22998033
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>

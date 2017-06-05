@@ -22,7 +22,7 @@
                     </td>
                     <td width="70%">
                         <asp:TextBox ID="tbUsuario" runat="server" placeholder="Ingrese Usuario (Ej: 12345678-9)" MaxLength="10"
-                            Width="100%"></asp:TextBox>
+                            Width="100%" OnTextChanged="tbUsuario_TextChanged"></asp:TextBox>
                     </td>
                     <td width="5%">
                         <asp:RequiredFieldValidator ID="rfvUsuario" runat="server" ErrorMessage="(*)" ValidationGroup="vgLogin"

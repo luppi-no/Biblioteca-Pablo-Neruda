@@ -1,0 +1,9 @@
+C:\Users\jfuenzalidar\Desktop\recursos\menu_bg.png
+C:\Users\jfuenzalidar\Desktop\recursos\ebab_mbucrt.png
+C:\Users\jfuenzalidar\Desktop\recursos\ebab_mbucrt_d.png
+C:\Users\jfuenzalidar\Desktop\recursos\ebab_mbucrt_d2.png
+C:\Users\jfuenzalidar\Desktop\recursos\ebab_mbucrt_c.png
+C:\Users\jfuenzalidar\Desktop\recursos\ebab_mbucrt_c2.png
+C:\Users\jfuenzalidar\Desktop\recursos\mbjsmbucrt.js
+C:\Users\jfuenzalidar\Desktop\recursos\mbcsmbucrt.css
+C:\Users\jfuenzalidar\Desktop\recursos\filelist_ucrt.txt

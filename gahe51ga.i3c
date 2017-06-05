@@ -1,0 +1,227 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Sitio.Master" AutoEventWireup="true" CodeBehind="Geo.aspx.cs" Inherits="Proyecto.WebForm6" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadScript" runat="server">
+    <style>
+    a, a:hover {
+      text-decoration: none;
+    }
+        
+    /**********/
+    
+    ul#navWrapper {
+      border: 0 black dashed;
+      margin-left: 0px;
+      float: left;
+          width: 1384px;
+      }
+        
+    ul#navWrapper li {
+      border: 0 red dashed;    
+      float: left;
+      list-style: none;
+      margin-right: 0.75em;
+      background-color: #DDD;
+      padding: 0 0.25em;
+      border-radius: 6px;
+      box-shadow: 3px 3px 6px 1px #333;
+          width: 190px;
+          font: 200%;
+      }
+    
+    ul#navWrapper li li {
+      border: 0 blue dashed;    
+      float: none;
+      margin-left: -44px;
+      margin-top: 3px;
+    }
+
+    ul#navWrapper li li:first-child { 
+      margin-top: 4px;
+    }
+
+    ul#navWrapper ul {
+      display: none;
+      position: absolute;
+      background-color: #FFF; /* For non-CSS3 browsers. */
+      background-color: rgba(255, 255, 255, 0);
+    }
+    
+    ul#navWrapper li:hover ul {
+      display: block;
+    }
+    
+    ul#navWrapper a {
+      font-weight: 700;
+    }
+    
+    ul#navWrapper li:hover {
+      background-color: #d2d3d8;
+    }    
+    
+    /**********/
+    
+    div#banner {
+      border: 1px black solid;
+      border-radius: 4px;    
+      clear: both;
+      height: 4em;
+      background-color: rgb(85, 126, 185); /* For non-CSS3 browsers. */
+      background-image: -webkit-radial-gradient(100% 0%, circle cover, rgb(104,24,136) 0%, rgb(85,126,185) 100%);
+      background-image: radial-gradient(circle at 100% 0%, rgb(104,24,136) 0%, rgb(85,126,185) 100%); /* IE10 and later */
+    }
+      .auto-style1 {
+          text-align: right;
+      }
+      .auto-style2 {
+          text-align: left;
+      }
+      .auto-style7 {
+          font-size: xx-large;
+          font-family: Cambria;
+      }
+        .auto-style8 {
+            font-size: medium;
+        }
+        .auto-style9 {
+            font-size: medium;
+            color: #003399;
+        }
+  </style>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
+    <table style="width:100%;">
+            <table style="width: 100%;">
+                        <tr>
+                            <td style="text-align: left;  class="auto-style6">
+                                <strong>
+                                <ul id="navWrapper"> <!-- Top Nav -->
+    <li> <!-- Menu A -->
+      <a href="Ingreso.aspx" aria-haspopup="true" class="auto-style9">PERSONA</a>
+      
+    <span class="auto-style8">
+      
+    </li> <!-- Menu A -->
+    <li> <!-- Menu B -->
+        </span>
+      <a href="" aria-haspopup="true" class="auto-style9">EVALUACIONES</a>
+      <ul>
+        <li><a href="/Evaluaciones.aspx" class="auto-style8">EVALUACIÓN PSICOLABORAL</a></li>
+        <li><a href="/Geo.aspx" class="auto-style8">EVALUACIÓN GEOSINTÉTICOS</a></li>
+        <li><a href="/Maquinaria.aspx" class="auto-style8">EVALUACIÓN MAQUINARIAS</a></li>        
+      </ul>
+        <span class="auto-style8">
+    </li> <!-- Menu B -->
+      <li> <!-- Menu A -->
+          </span>
+      <a href="Buscar.aspx" aria-haspopup="true" class="auto-style9">BUSCAR</a>
+      
+    <span class="auto-style8">
+      
+    </li> <!-- Menu A -->
+          </span>
+  </ul></strong>
+            </td>
+                        </tr>
+                    </table>
+                    </tr>
+                    </table>
+            </td>
+        </tr>
+        </table>
+    <br />
+    <span class="auto-style7"><strong>Evaluación de Geosintéticos</strong></span><br />
+    <table style="width: 100%;">
+            <tr>
+                <td class="text-right">
+                    <asp:Label ID="Label6" runat="server" Text="Fecha de Evaluacion:"></asp:Label>
+                </td>
+                <td class="text-left">
+                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <asp:Label ID="Label13" runat="server" Text="Equipo Evaluado: "></asp:Label>
+                </td>
+                <td class="text-left">
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+                    <asp:Label ID="Label14" runat="server" Text="Marca Equipo:"></asp:Label>
+                </td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="text-right">
+                    <asp:Label ID="Label15" runat="server" Text="Modelo Equipo:"></asp:Label>
+                </td>
+                <td class="text-left">
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <asp:Label ID="Label16" runat="server" Text="Superficie Evaluada:"></asp:Label>
+                </td>
+                <td class="text-left">
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <asp:Label ID="Label17" runat="server" Text="Resultado Eval. Teórica:"></asp:Label>
+                </td>
+                <td class="text-left">
+                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="text-right">
+                    <asp:Label ID="Label18" runat="server" Text="Resultado Eval. Práctica: "></asp:Label>
+                </td>
+                <td class="text-left">
+                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <asp:Label ID="Label19" runat="server" Text="Resultado Global:"></asp:Label>
+                </td>
+                <td class="text-left">
+                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    &nbsp;</td>
+                <td class="text-left">
+                    &nbsp;</td>
+            </tr>
+
+            <tr>
+                <td class="text-right">
+                    &nbsp;</td>
+                <td class="text-left">
+                    <asp:Button ID="Bt_agregar" runat="server" Text="Agregar" />
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    &nbsp;</td>
+                <td class="text-left">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style12" style="text-align: right">
+                    &nbsp;</td>
+                <td class="text-left">&nbsp;</td>
+            </tr>
+    </table>
+</asp:Content>

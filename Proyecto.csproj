@@ -34,7 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Proyecto.XML</DocumentationFile>
+    <DocumentationFile>bin\Proyecto.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -56,10 +56,16 @@
     <Reference Include="AjaxMin">
       <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v14.1.Web, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>packages\Microsoft.ReportViewer.Common.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -68,8 +74,13 @@
       <Private>True</Private>
       <HintPath>packages\Microsoft.ReportViewer.WebForms.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -86,6 +97,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Tde.Controles.RutTextBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Tde.Controles.RutTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Web.UI">
       <HintPath>lib\RCAJAX\2014.1.403.40\Telerik.Web.UI.dll</HintPath>
     </Reference>
@@ -94,6 +109,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="buscarevaluacion.aspx" />
+    <Content Include="Content\img\banner-biblioteca-amarillo.png" />
+    <Content Include="Evaluaciones.aspx" />
+    <Content Include="inicio.aspx" />
+    <Content Include="Maquinaria.aspx" />
+    <Content Include="Geo.aspx" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
@@ -103,67 +124,197 @@
     <Content Include="Content\font-awesome-ie7.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\img\404.jpg" />
-    <Content Include="Content\img\banner-biblioteca-amarillo.png" />
-    <Content Include="Content\img\calendar.gif" />
-    <Content Include="Content\img\fotoinicio.JPG" />
-    <Content Include="Content\img\grupo_emin_01.png" />
-    <Content Include="Content\img\logo_grupo_emin.png" />
+    <Content Include="grafico.aspx" />
+    <Content Include="Imagenes\badera roja peque.png" />
+    <Content Include="Imagenes\blanco33px.png" />
+    <Content Include="Imagenes\Iconos\impresora.png" />
+    <Content Include="Imagenes\Iconos\printme.png" />
+    <Content Include="Imagenes\zurb\fi-address-book.svg" />
+    <Content Include="informegeosintetico.aspx" />
+    <Content Include="informemaquinarias.aspx" />
+    <Content Include="informepsicolaboral.aspx" />
+    <Content Include="Mantenedores.aspx" />
+    <Content Include="menu-tecnico.aspx" />
+    <Content Include="menuinforme.aspx" />
     <Content Include="Error404.aspx" />
-    <Content Include="informes.aspx" />
-    <Content Include="inicio.aspx" />
+    <Content Include="ficha.aspx" />
+    <Content Include="Imagenes\badera roja peque.jpg" />
+    <Content Include="Imagenes\badera roja peque3.jpg" />
+    <Content Include="Imagenes\badera roja.tif" />
+    <Content Include="Imagenes\blanco.png" />
+    <Content Include="Imagenes\Capital_Humano_sm.png" />
+    <Content Include="Imagenes\flecha.png" />
+    <Content Include="Imagenes\Iconos\actualizar-la-base-de-datos-icono-7326-32.png" />
+    <Content Include="Imagenes\Iconos\calendario.png" />
+    <Content Include="Imagenes\Iconos\cancelar-icono-4624-16.png" />
+    <Content Include="Imagenes\Iconos\dibujo-a-lapiz-modificar-escribir-icono-8118-48.png" />
+    <Content Include="Imagenes\Iconos\imprimir-icono-5119-48.png" />
+    <Content Include="Imagenes\Iconos\lupa.PNG" />
+    <Content Include="Imagenes\Iconos\modificar-la-base-de-datos-icono-6748-32.png" />
+    <Content Include="Imagenes\Iconos\vcard-eliminar-icono-9724-16.png" />
+    <Content Include="Imagenes\lg-curved-arrow - der.png" />
+    <Content Include="Imagenes\lg-curved-arrow - izq.png" />
+    <Content Include="Imagenes\lg-curved-arrow.png" />
+    <Content Include="Imagenes\lupasp.png" />
+    <Content Include="Imagenes\palo-blanco.png" />
+    <Content Include="Imagenes\Sitio-en-construccion.jpg" />
+    <Content Include="Imagenes\spi.jpg" />
+    <Content Include="Imagenes\zkaHqx.gif" />
+    <Content Include="Informe.aspx" />
     <Content Include="login.aspx" />
-    <Content Include="mail.aspx" />
+    <Content Include="personageo.aspx" />
+    <Content Include="personamaquinaria.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Web.config">
+    <Content Include="Ingreso.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="Buscar.aspx" />
+    <Content Include="FichaCurricular.aspx" />
+    <Content Include="WebForm10.aspx" />
+    <Content Include="xml\areas.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="xml\buscaespecialidad.xml" />
+    <Content Include="xml\Cargos.xml">
+      <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="xml\carrera.xml" />
+    <Content Include="xml\certificacion.xml" />
+    <Content Include="xml\cities.xml" />
+    <Content Include="xml\equipogeo.xml" />
+    <Content Include="xml\Equipomaquinaria.xml" />
+    <Content Include="xml\Especialidadcasa.xml">
+      <SubType>Designer</SubType>
     </Content>
+    <Content Include="xml\Especialidad.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xml\Estudios.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xml\licencia.xml" />
+    <Content Include="xml\marcageo.xml" />
+    <Content Include="xml\marcamaquinaria.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xml\modelogeo.xml" />
+    <Content Include="xml\modelomaquina.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xml\regiones.xml" />
+    <Content Include="xml\Porcentage.xml" />
+    <Content Include="xml\resultado.xml" />
+    <Content Include="xml\superficiegeo.xml" />
+    <Content Include="xml\alerta.xml" />
+    <Content Include="xml\unoacien-noaplica.xml" />
+    <Content Include="xml\unoasetentaycinco.xml" />
+    <Content Include="xml\unoacien.xml" />
+    <Content Include="xml\sinoaplica.xml" />
+    <Content Include="xml\categoriasmaquinaria.xml" />
+    <Content Include="xml\unoasiete.xml" />
+    <Content Include="xml\years.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="buscarevaluacion.aspx.cs">
+      <DependentUpon>buscarevaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscarevaluacion.aspx.designer.cs">
+      <DependentUpon>buscarevaluacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Evaluaciones.aspx.cs">
+      <DependentUpon>Evaluaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Evaluaciones.aspx.designer.cs">
+      <DependentUpon>Evaluaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inicio.aspx.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maquinaria.aspx.cs">
+      <DependentUpon>Maquinaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maquinaria.aspx.designer.cs">
+      <DependentUpon>Maquinaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo.aspx.cs">
+      <DependentUpon>Geo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo.aspx.designer.cs">
+      <DependentUpon>Geo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Capas\ActiveDirectory.cs" />
-    <Compile Include="Capas\BL\bl_capacitaciones.cs" />
-    <Compile Include="Capas\BL\bl_competencias.cs" />
-    <Compile Include="Capas\BL\bl_centrosdecosto.cs" />
-    <Compile Include="Capas\BL\bl_areas.cs" />
-    <Compile Include="Capas\BL\bl_cargos.cs" />
+    <Compile Include="Capas\BL\bl_geo.cs" />
+    <Compile Include="Capas\BL\bl_ingreso.cs" />
     <Compile Include="Capas\BL\bl_evaluaciones.cs" />
-    <Compile Include="Capas\BL\bl_proveedores.cs" />
-    <Compile Include="Capas\BL\bl_usuarios.cs" />
-    <Compile Include="Capas\BL\bl_formularios.cs" />
-    <Compile Include="Capas\BL\bl_gerencias.cs" />
-    <Compile Include="Capas\BL\bl_periodos.cs" />
-    <Compile Include="Capas\BL\bl_tipocompetencias.cs" />
-    <Compile Include="Capas\BL\bl_facturas.cs" />
-    <Compile Include="Capas\BL\bl_valorcurso.cs" />
-    <Compile Include="Capas\BL\bl_tipocapacitaciones.cs" />
+    <Compile Include="Capas\BL\bl_maquinaria.cs" />
+    <Compile Include="Capas\BL\bl_psico.cs" />
+    <Compile Include="Capas\BL\bl_trabajo.cs" />
     <Compile Include="Capas\Common.cs" />
-    <Compile Include="Capas\DA\da_tipocapacitaciones.cs" />
-    <Compile Include="Capas\DA\da_valorcurso.cs" />
-    <Compile Include="Capas\DA\da_facturas.cs" />
-    <Compile Include="Capas\DA\da_tipocompetencias.cs" />
-    <Compile Include="Capas\DA\da_periodos.cs" />
-    <Compile Include="Capas\DA\da_capacitaciones.cs" />
-    <Compile Include="Capas\DA\da_gerencias.cs" />
+    <Compile Include="Capas\DA\da_geo.cs" />
+    <Compile Include="Capas\DA\da_maquinaria.cs" />
+    <Compile Include="Capas\DA\da_psico.cs" />
+    <Compile Include="Capas\DA\da_trabajo.cs" />
     <Compile Include="Capas\DA\da_evaluaciones.cs" />
-    <Compile Include="Capas\DA\da_formularios.cs" />
-    <Compile Include="Capas\DA\da_proveedores.cs" />
-    <Compile Include="Capas\DA\da_usuarios.cs" />
-    <Compile Include="Capas\DA\da_cargos.cs" />
-    <Compile Include="Capas\DA\da_areas.cs" />
-    <Compile Include="Capas\DA\da_centrosdecosto.cs" />
-    <Compile Include="Capas\DA\da_competencias.cs" />
+    <Compile Include="Capas\DA\da_ingreso.cs" />
     <Compile Include="Capas\EncryptedQueryString.cs" />
     <Compile Include="Capas\MailExchange.cs" />
+    <Compile Include="grafico.aspx.cs">
+      <DependentUpon>grafico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="grafico.aspx.designer.cs">
+      <DependentUpon>grafico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informegeosintetico.aspx.cs">
+      <DependentUpon>informegeosintetico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informegeosintetico.aspx.designer.cs">
+      <DependentUpon>informegeosintetico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informemaquinarias.aspx.cs">
+      <DependentUpon>informemaquinarias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informemaquinarias.aspx.designer.cs">
+      <DependentUpon>informemaquinarias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informepsicolaboral.aspx.cs">
+      <DependentUpon>informepsicolaboral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informepsicolaboral.aspx.designer.cs">
+      <DependentUpon>informepsicolaboral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores.aspx.cs">
+      <DependentUpon>Mantenedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenedores.aspx.designer.cs">
+      <DependentUpon>Mantenedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="menu-tecnico.aspx.cs">
+      <DependentUpon>menu-tecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu-tecnico.aspx.designer.cs">
+      <DependentUpon>menu-tecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="menuinforme.aspx.cs">
+      <DependentUpon>menuinforme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menuinforme.aspx.designer.cs">
+      <DependentUpon>menuinforme.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Error404.aspx.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,19 +322,19 @@
     <Compile Include="Error404.aspx.designer.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
     </Compile>
-    <Compile Include="informes.aspx.cs">
-      <DependentUpon>informes.aspx</DependentUpon>
+    <Compile Include="ficha.aspx.cs">
+      <DependentUpon>ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="informes.aspx.designer.cs">
-      <DependentUpon>informes.aspx</DependentUpon>
+    <Compile Include="ficha.aspx.designer.cs">
+      <DependentUpon>ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="inicio.aspx.cs">
-      <DependentUpon>inicio.aspx</DependentUpon>
+    <Compile Include="Informe.aspx.cs">
+      <DependentUpon>Informe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="inicio.aspx.designer.cs">
-      <DependentUpon>inicio.aspx</DependentUpon>
+    <Compile Include="Informe.aspx.designer.cs">
+      <DependentUpon>Informe.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -199,12 +350,19 @@
     <Compile Include="Ingreso.Master.designer.cs">
       <DependentUpon>Ingreso.Master</DependentUpon>
     </Compile>
-    <Compile Include="mail.aspx.cs">
-      <DependentUpon>mail.aspx</DependentUpon>
+    <Compile Include="personageo.aspx.cs">
+      <DependentUpon>personageo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mail.aspx.designer.cs">
-      <DependentUpon>mail.aspx</DependentUpon>
+    <Compile Include="personageo.aspx.designer.cs">
+      <DependentUpon>personageo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="personamaquinaria.aspx.cs">
+      <DependentUpon>personamaquinaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="personamaquinaria.aspx.designer.cs">
+      <DependentUpon>personamaquinaria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sitio.Master.cs">
@@ -214,9 +372,46 @@
     <Compile Include="Sitio.Master.designer.cs">
       <DependentUpon>Sitio.Master</DependentUpon>
     </Compile>
+    <Compile Include="Ingreso.aspx.cs">
+      <DependentUpon>Ingreso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingreso.aspx.designer.cs">
+      <DependentUpon>Ingreso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar.aspx.cs">
+      <DependentUpon>Buscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buscar.aspx.designer.cs">
+      <DependentUpon>Buscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FichaCurricular.aspx.cs">
+      <DependentUpon>FichaCurricular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FichaCurricular.aspx.designer.cs">
+      <DependentUpon>FichaCurricular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm10.aspx.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm10.aspx.designer.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\fonts\glyphicons-halflings-regular.eot" />
@@ -233,11 +428,49 @@
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <None Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Sitio.Master" />
+    <Content Include="Scripts\menu.less" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -265,6 +498,8 @@
       <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' == ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -30,9 +30,60 @@ namespace Proyecto
             }
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
+        protected void lnkbCompetencias_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ingreso.aspx");
+        }
+
+        protected void lnkbCentrosDeCosto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("centrosdecosto.aspx");
+        }
+
+        protected void lnkbAreasGerencias_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("areas.aspx");
+        }
+
+        protected void lnkbCargos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("cargos.aspx");
+        }
+
+        protected void lnkbUsuarios_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("usuarios.aspx");
+        }
+
+        protected void lnkbFormularios_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("formularios.aspx");
+        }
+
+        protected void lnkbAdmEvaluaciones_Click(object sender, EventArgs e)
+        {
+            inicioadmin.bCapa = false;
+            Response.Redirect("admevaluaciones.aspx");
+        }
+
+        protected void lnkbCorreos_Click(object sender, EventArgs e)
         {
             Response.Redirect("mail.aspx");
+        }
+
+        protected void lnkbInformes_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("informes.aspx");
+        }
+
+        protected void lnkbPeriodos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("periodoevaluacion.aspx");
+        }
+
+        protected void lnkbHistorial_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("historialevaluaciones.aspx");
         }
     }
 }

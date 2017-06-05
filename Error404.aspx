@@ -9,7 +9,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
     <div class="tabbable">
         <ul class="nav nav-tabs">
-            <li class="active"><a href="#error404" data-toggle="tab"><span class="icon-list"></span>
+            <li class="active" style="left: 2px; top: 4px"><a href="#error404" data-toggle="tab"><span class="icon-list"></span>
                 &nbsp;Página no Encontrada</a></li>
         </ul>
         <br />
@@ -18,8 +18,12 @@
                 <div align="center">
                     <asp:Image ID="i404" runat="server" ImageUrl="~/Content/img/404.jpg" />
                     <br />
-                    <asp:Button ID="btnVolver" runat="server" Text="Volver al Login" 
+                    <ul>
+                        <li>
+                            <asp:Button ID="btnVolver" runat="server" Text="Volver al Login" 
                         CssClass="btn btn-default btneminmedium" onclick="btnVolver_Click" />
+                        </li>
+                    </ul>
                     <br />
                 </div>
             </div>
